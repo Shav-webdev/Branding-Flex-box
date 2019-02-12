@@ -3,11 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Branding Flex</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
-		<div class="panel">
+		<div class="panel" id="first-panel">
 			<div class="panel-header">
 				<h2>Basic</h2>
 			</div>
@@ -17,7 +19,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, voluptates.</p>
 			</div>
 		</div>
-		<div class="panel">
+		<div class="panel" id="second-panel">
 			<div class="panel-header">
 				<h2>Pro</h2>
 			</div>
@@ -27,7 +29,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, quis!</p>
 			</div>
 		</div>
-		<div class="panel">
+		<div class="panel" id="third-panel">
 			<div class="panel-header">
 				<h2>Premium</h2>
 			</div>
@@ -37,16 +39,23 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, repellendus!</p>
 			</div>
 		</div>
-		<div class="progress-bar">
-			<div class="first-bar"><lable>first</lable>
-				<progress max="100" value="60"></progress>
-			</div>
-			<div class="second-bar"><lable>second</lable>
-				<progress max="100" value="80"></progress>
-			</div>
-			<div class="third-bar"><lable>third</lable>
-				<progress max="100" value="100"></progress>				
-			</div>
+		<div class="progress-title">
+			<span class="start"> 5 Users</span><span class="span-end">100 Users</span>
+		</div>
+		<div class="bar-item w3-light-grey w3-round-xlarge" id="first-progress">
+		    <div class="w3-container w3-blue w3-round-xlarge"></div>
+		</div>
+		<div class="progress-title">
+			<span class="start">20 GB</span><span class="span-end">200 GB</span>
+		</div>
+		<div class="bar-item w3-light-grey w3-round-xlarge" id="second-progress">
+		    <div class="w3-container w3-blue w3-round-xlarge"></div>
+		</div>
+		<div class="progress-title">
+			<span class="start">1 Project</span> <span class="span-end">50 Project</span>
+		</div>
+		<div class="bar-item w3-light-grey w3-round-xlarge" id="third-progress">
+		    <div class="w3-container w3-blue w3-round-xlarge"></div>
 		</div>
 	</div>
 </body>
