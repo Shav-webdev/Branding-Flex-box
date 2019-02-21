@@ -1,48 +1,46 @@
 * {
-  margin: 0;
   padding: 0;
   transition: 0.3s;
   box-sizing: border-box;
 }
 
 body {
+  display: flex;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
   font-family: arial, helvetica, sans-serif;
   width: 100%;
-  max-width: 1000px;
-  height: 100%;
-  max-height: 1000px;
   background-color: #fff;
-  margin: 100px auto;
 }
 
 .container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: #e9edef;
-  width: 100%;
-  max-width: 800px;
-  height: 100%;
-  max-height: 1000px;
+  max-width: 1100px;
+  margin: 100px auto;
 }
 
 .panel {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   text-align: center;
   background-color: #fff;
-  width: 220px;
-  height: 320px;
-  border-radius: 10px;
   position: relative;
+  border-radius: 10px;
+  margin: 15px;
 }
 
 .panel:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
   transition: 0.5s;
 }
 
@@ -69,7 +67,6 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 10px 10px 0 0;
-  height: 72px;
 }
 .panel-header h2 {
   color: #FFF;
@@ -77,26 +74,30 @@ body {
 
 .panel-body {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
   flex-wrap: wrap;
-  height: 250px;
+  position: inherit;
   line-height: 1.4;
 }
 .panel-body h1 {
+  position: inherit;
   margin: 0;
   padding: 0;
   font-size: 50px;
   font-weight: bold;
 }
 .panel-body h2 {
+  position: inherit;
   margin: 0;
   padding: 0;
   font-size: 40px;
   font-weight: bold;
 }
 .panel-body p {
+  position: inherit;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -106,8 +107,8 @@ body {
 .progress-title {
   display: inline-flex;
   justify-content: space-between;
-  width: 92%;
-  line-height: 1.1;
+  width: 90%;
+  margin: 5px;
 }
 .progress-title span {
   font-size: 20px;
@@ -116,8 +117,9 @@ body {
 
 .bar-item {
   width: 100%;
-  max-width: 750px;
+  max-width: 1000px;
   height: 20px;
+  margin: 5px;
 }
 
 .w3-container {
@@ -169,249 +171,259 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 280px) {
+@media screen and (max-width: 280px) {
   body {
-    min-width: 280px;
+    max-width: 280px;
   }
 
   .container {
-    min-width: 270px;
+    max-width: 270px;
   }
 
   .panel {
-    width: 200px;
-    height: 300px;
-    margin: 20px;
+    width: 180px;
+    margin: 10px;
   }
 
-  .panel-body {
-    height: 220px;
-    line-height: 1.1;
+  .panel-header h2 {
+    font-size: 25px;
   }
+
   .panel-body h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 40px;
-    font-weight: bold;
-  }
-  .panel-body h2 {
-    margin: 0;
-    padding: 0;
     font-size: 35px;
     font-weight: bold;
   }
+  .panel-body h2 {
+    font-size: 30px;
+    font-weight: bold;
+  }
   .panel-body p {
-    margin: 0;
-    padding: 0;
+    font-size: 8px;
+    font-weight: bold;
+  }
+
+  .progress-title {
+    width: 92%;
+  }
+  .progress-title span {
+    font-size: 15px;
+    font-weight: lighter;
+  }
+
+  .bar-item {
+    width: 90%;
+    height: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    max-width: 480px;
+  }
+
+  .container {
+    max-width: 450px;
+  }
+
+  .panel {
+    width: 190px;
+    margin: 15px;
+  }
+
+  .panel-header h2 {
+    font-size: 30px;
+  }
+
+  .panel-body h1 {
+    font-size: 37px;
+    font-weight: bold;
+  }
+  .panel-body h2 {
+    font-size: 33px;
+    font-weight: bold;
+  }
+  .panel-body p {
     font-size: 10px;
     font-weight: bold;
   }
 
   .progress-title {
-    display: inline-flex;
-    justify-content: space-between;
     width: 92%;
-    line-height: 1.1;
   }
   .progress-title span {
-    font-size: 15px;
-    font-weight: lighter;
+    font-size: 17px;
   }
 
   .bar-item {
-    width: 95%;
-    height: 10px;
-    margin: 5px;
+    width: 90%;
+    height: 15px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 680px) {
   body {
-    width: 100%;
-    max-width: 500px;
-    height: 100%;
-    max-height: 1200px;
+    max-width: 680px;
   }
 
   .container {
-    width: 100%;
-    max-width: 490px;
-    height: 100%;
-    max-height: 1100px;
-    margin: 0;
+    max-width: 650px;
   }
 
   .panel {
-    width: 205px;
-    height: 305px;
-    margin: 20px;
+    width: 210px;
+    margin: 17px;
   }
 
-  .panel-body {
-    height: 230px;
-    line-height: 1.2;
+  .panel-header h2 {
+    font-size: 32px;
   }
+
   .panel-body h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 42px;
+    font-size: 38px;
     font-weight: bold;
   }
   .panel-body h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 37px;
+    font-size: 35px;
     font-weight: bold;
   }
   .panel-body p {
-    margin: 0;
-    padding: 0;
     font-size: 12px;
     font-weight: bold;
   }
 
   .progress-title {
-    display: inline-flex;
-    justify-content: space-between;
     width: 92%;
-    line-height: 1.2;
   }
   .progress-title span {
-    font-size: 17px;
-    font-weight: lighter;
+    font-size: 18px;
   }
 
   .bar-item {
-    width: 95%;
-    height: 14px;
-    margin: 5px;
+    width: 90%;
+    height: 17px;
   }
 }
-@media screen and (max-width: 1000px) {
-  body {
-    width: 100%;
-    max-width: 800px;
-    height: 100%;
-    max-height: 1600px;
-  }
-
+@media screen and (max-width: 768px) {
   .container {
-    width: 100%;
-    max-width: 780px;
-    height: 100%;
-    max-height: 1500px;
-    margin: 0;
+    max-width: 750px;
   }
 
   .panel {
-    width: 215px;
-    height: 315px;
-    margin: 20px;
+    width: 200px;
+    margin: 10px;
   }
 
-  .panel-body {
-    height: 240px;
-    line-height: 1.3;
+  .panel-header h2 {
+    font-size: 35px;
   }
+
   .panel-body h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 45px;
-    font-weight: bold;
-  }
-  .panel-body h2 {
-    margin: 0;
-    padding: 0;
     font-size: 40px;
     font-weight: bold;
   }
+  .panel-body h2 {
+    font-size: 35px;
+    font-weight: bold;
+  }
   .panel-body p {
-    margin: 0;
-    padding: 0;
     font-size: 15px;
     font-weight: bold;
   }
 
   .progress-title {
-    display: inline-flex;
-    justify-content: space-between;
-    width: 95%;
-    line-height: 1.2;
+    width: 92%;
   }
   .progress-title span {
-    font-size: 18px;
-    font-weight: lighter;
+    font-size: 20px;
   }
 
   .bar-item {
-    width: 95%;
-    height: 16px;
-    margin: 5px;
+    width: 90%;
+    height: 20px;
   }
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1050px) {
   body {
-    width: 100%;
-    max-width: 800px;
-    height: 100%;
-    max-height: 1600px;
+    max-width: 1050px;
   }
 
   .container {
-    width: 100%;
-    max-width: 780px;
-    height: 100%;
-    max-height: 1500px;
-    margin: 0;
+    max-width: 1000px;
   }
 
   .panel {
     width: 220px;
-    height: 320px;
-    margin: 20px;
+    margin: 15px;
   }
 
-  .panel-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 250px;
-    line-height: 1.4;
+  .panel-header h2 {
+    font-size: 35px;
   }
+
   .panel-body h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 50px;
-    font-weight: bold;
-  }
-  .panel-body h2 {
-    margin: 0;
-    padding: 0;
     font-size: 40px;
     font-weight: bold;
   }
+  .panel-body h2 {
+    font-size: 35px;
+    font-weight: bold;
+  }
   .panel-body p {
-    margin: 0;
-    padding: 0;
     font-size: 15px;
     font-weight: bold;
   }
 
   .progress-title {
-    display: inline-flex;
-    justify-content: space-between;
     width: 92%;
-    line-height: 1.1;
   }
   .progress-title span {
     font-size: 20px;
-    font-weight: lighter;
   }
 
   .bar-item {
-    width: 100%;
-    max-width: 750px;
+    width: 90%;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 2250px) {
+  body {
+    max-width: 1050px;
+  }
+
+  .container {
+    /* 		margin: 50px auto;*/
+    max-width: 1000px;
+  }
+
+  .panel {
+    width: 220px;
+    margin: 15px;
+  }
+
+  .panel-header h2 {
+    font-size: 35px;
+  }
+
+  .panel-body h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .panel-body h2 {
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .panel-body p {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .progress-title {
+    width: 92%;
+  }
+  .progress-title span {
+    font-size: 20px;
+  }
+
+  .bar-item {
+    width: 90%;
     height: 20px;
   }
 }
